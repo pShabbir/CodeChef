@@ -1,0 +1,11 @@
+//Find the remainder
+import java.util.Scanner;
+class Remainder{
+	static int a[];
+	int m;
+	public static void main(String sha[])
+	{
+		Scanner obj=new Scanner(System.in);
+		//enter the test case
+		int n=obj.nextInt();
+		a=new int[n];

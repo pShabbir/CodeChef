@@ -1,0 +1,17 @@
+I’m a very motivated worker and a
+fast learner .I am a fresher, I don’t have any work experience, but I strongly believe
+that I am much more capable in giving significant contribution that
+will be surely beneficial for the company’s growth. I’m excited by the prospect of bringing this same
+level of commitment and enthusiasm to this new and exciting opportunity
+and I think this opportunity is a great fit for me.
+
+select name from student where roll in ( select roll from result where marks>90 and subid in (select subid from subjectid where subject='phy'));
+
+
+select name from student natural join result natural join subjectid where marks > 90 and subject='phy';
+select count(roll) from student natural join result natural join subjectid where subject='chem';
+select count(distinct subid) from student natural join result  where name='shabbir hussain';
+select avg(marks) from result natural join subjectid where subject='phy';
+select name from student natural join result where marks in ( select max(marks) from result natural join subjectid where subject='chem');
+select name from student natural join result where marks < (select avg(marks) from result natural join subjectid where subject='maths');
+select roll,avg(marks) from result group by roll having count(subid) in ( select count(subid) from subjectid);
